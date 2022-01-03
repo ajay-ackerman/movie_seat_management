@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./loginstyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+  <h2>Login</h2>
+  <form id="login-form">
+    <p>
+    <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"></i>
+    </p>
+    <p>
+    <input type="password" id="email" name="email" placeholder="password" required><i class="validation"></i>
+    </p>
+    <p>
+    <input type="button" id="login" value="Login" onclick="fun()" style="background-color: rgb(0, 183, 255);">
+    </p>
+  </form>
+  </div>
+
+  <script>
+    function fun() {
+      var name= document.getElementById("username").value;
+      var pass=document.getElementById("email").value;
+      if (name=="abc" && pass=="abc123"){
+        window.open("index.html");
+      }
+      else{
+        setTimeout(() => {
+        alert("Enter valid username and passsword !");
+        }, 1000);
+      }
+    }
+  </script>
+  
+</body>
+</html>
